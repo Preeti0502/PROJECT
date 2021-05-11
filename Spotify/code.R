@@ -17,10 +17,6 @@ par(mfrow=c(2,7))
 for(i in 1:13){
   boxplot(data1[,i],main=names(data1)[i])
 }
-
-for(i in 1:13){
-  histogram(data1[,i],main=names(data1)[i])
-}
   
 #Examining Correlation between variables
 library(psych)
