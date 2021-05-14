@@ -17,7 +17,11 @@ par(mfrow=c(2,7))
 for(i in 1:13){
   boxplot(data1[,i],main=names(data1)[i])
 }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> f06bae4f651882d59fbc15d7a0643b1f81353179
 #Examining Correlation between variables
 library(psych)
 pairs.panels(data1[,1:13],method="pearson",hist.col=7,
