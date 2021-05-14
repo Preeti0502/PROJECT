@@ -1,6 +1,6 @@
 ##importing data
 library(readr)
-data <- read_csv("C:/Users/k/Desktop/project/songdata.csv")
+data = read_csv("D:/1Preeti/Project/Data_mining/songdata.csv")
 head(data,10)
 
 ##Data Pre-Processing
@@ -18,10 +18,6 @@ for(i in 1:13){
   boxplot(data1[,i],main=names(data1)[i])
 }
 
-for(i in 1:13){
-  histogram(data1[,i],main=names(data1)[i])
-}
-  
 #Examining Correlation between variables
 library(psych)
 pairs.panels(data1[,1:13],method="pearson",hist.col=7,
@@ -30,6 +26,8 @@ pairs.panels(data1[,1:13],method="pearson",hist.col=7,
 
 ##Data Normalization
 library(caret)
+library(ggplot2)
+library(lattice)
 preproc=preProcess(data1[,c(3,6,8,11,12)], method=c("center","scale"))
 norm=predict(preproc, data1)
 summary(norm)
